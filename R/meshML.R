@@ -1,6 +1,6 @@
-#' Blend ML
+#' Mesh ML
 #'
-#' The function \code{blendM} designed to embed the score calculated by a machine learning (ML) method into a parametric regression, in particular a generalized linear model (GLM). 
+#' The function \code{meshML} designed to mesh (or embed) the score calculated by a machine learning (ML) method into a parametric regression, in particular a generalized linear model (GLM). 
 #' The motivation is to harness the power of ML methods where a simple interpretation of the marginal effect of some variables is not mandatory, while keeping a transparent structure with simple interpretation (and direct understanding of marginal effects) for variables of interest.  \cr \cr
 #' Since we expect possible co-linearities to exist between the variables used by the 2 methods, and since the parameters of interest are the ones included in the parametric regression, the ML regression will run on an orthogonalized version of the dependent variables (this will be done using simple linear regression and regression on the residuals) \cr \cr
 #' @param data The data-frame containing the data
@@ -25,7 +25,7 @@
 #' summary(x$param)
 
   
-blendML <- function(
+meshML <- function(
   data, 
   p_FUN = glm,
   p_formula, 
